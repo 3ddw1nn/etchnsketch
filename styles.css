@@ -1,5 +1,5 @@
-/* This will design the size, color, and flex style of the
-rows and columns */
+/* This will design the title, buttons, containers and style of 
+flexboxes */
 body{
 background-color: black;
 }
@@ -42,6 +42,8 @@ button {
     border-radius: 25px;
 
 }
+/* This will design the size, color, and flex style of the
+rows and columns */
 .gridRow {
     background-color: grey;
     display: flex;

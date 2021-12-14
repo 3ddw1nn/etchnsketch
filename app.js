@@ -1,6 +1,6 @@
 const container = document.getElementById("container");
 
-// This variable will define the size of the grid
+// This variable will define the default size of the grid
 let n = 16;
 
 // This function will create and append rows as divs with a class of "gridRow"
@@ -14,10 +14,9 @@ function makeRows() {
 };
 makeRows();
 
-//This will select all of the newly created rows with a class of "gridRow"
-// const gridRows = document.querySelectorAll(".gridRow")
-
-//This function will create and append columns inside each row with a class
+//This function will select  all of the newly created rows
+// with a class of "gridRow"
+//This function will also create and append columns inside each row with a class
 //of "gridColumn" by using a loop
 function makeColumns() {
     const gridRows = document.querySelectorAll(".gridRow")
@@ -30,9 +29,9 @@ function makeColumns() {
 );};
 makeColumns();
 hoverColor();
-//This will select all grid columns
 
-//this will seleach grid cell and run a hover function
+//this will select grid columns(nodelist) then
+//select each list item and run a hover function
     function hoverColor(){
         const gridCell = document.querySelectorAll(".gridColumn");
         gridCell.forEach(cell => { 
@@ -44,7 +43,8 @@ hoverColor();
 
 
 //This is will allow the user to set the grid size 
-//after clicking the Grid Size button
+//after clicking the Grid Size button. It will also remove
+//existing grid and set a min and max 
 
 function setGridSize() {
     n = prompt("Set your Grid Size", "")
@@ -68,6 +68,7 @@ function removeGrid(){
         defaultGrid.removeChild( defaultGrid.firstChild );
     }
 }
+//This will select reset button and remove Rows and Columns
 let resetGame = document.getElementById("reset").addEventListener("click", reset);
 function reset(){
     let resetGrid = document.getElementById('container');
@@ -78,7 +79,5 @@ function reset(){
     makeColumns();
     hoverColor();  
 }
-console.log(container);
-console.log(hoverColor);
 
 
