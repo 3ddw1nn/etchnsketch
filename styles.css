@@ -1,0 +1,55 @@
+/* This will design the size, color, and flex style of the
+rows and columns */
+body{
+background-color: black;
+}
+#title {
+    font-family: fantasy;
+    font-size: 50pt;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+button {
+    border-radius: 20px;
+    background-color: rgb(120, 34, 10);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 14pt;
+    font-weight: bold;
+    
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+#main {
+    display: flex;
+    justify-content: center;
+}
+#container { 
+    background-color: rgb(173, 42, 42);
+    padding: 50px;
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+
+}
+.gridRow {
+    background-color: grey;
+    display: flex;
+    flex-grow: 1;
+}
+.gridColumn {
+    background-color: white;
+    flex-grow: 1;
+    border: 1px solid lightgray;
+    display: flex;
+}
